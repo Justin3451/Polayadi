@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polayadi Mwone on a Turtle</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #87CEEB;
+            margin: 0;
+        }
+
+        .turtle {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            background-color: #228B22;
+            border-radius: 100px 100px 50px 50px;
+            animation: walk 3s linear infinite;
+        }
+
+        .turtle::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 50px;
+            width: 40px;
+            height: 40px;
+            background-color: #228B22;
+            border-radius: 50%;
+        }
+
+        .turtle::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+            width: 40px;
+            height: 20px;
+            background-color: #556B2F;
+            border-radius: 20px 20px 0 0;
+        }
+
+        @keyframes walk {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(300px); }
+        }
+
+        .text {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="turtle">
+        <div class="text">Polayadi Mwone</div>
+    </div>
+
+    <script>
+        // You can add any interactive elements or logic here if needed
+    </script>
+</body>
+</html>
